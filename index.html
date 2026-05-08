@@ -24,6 +24,7 @@
                   
                   <li class="menu__item"><a href="products.html" class="menu__link">Products</a></li>
                   <li class="menu__item"><a href="directory.html" class="menu__link">Directory</a></li>
+                  <li class="menu__item"><a href="blog.html" class="menu__link">Blog</a></li>
                   <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
                 </ul>
                 <a href="signup.html" class="actions-header__button">Sign Up</a>
@@ -135,30 +136,85 @@
       </section>
       <section class="page__testimonial testimonial">
         <div class="testimonial__container">
-          <h3 class="testiomonial__caption">Trusted Shops</h3>
-          <h2 class="testimonial__title title">
-            Herbal Link powers our herb restocks, tea menus, tincture shelves, and skincare rituals with true integrity—
-            clean sourcing, steady quality, and botanical care our community immediately recognizes.
-          </h2>
-          <div class="testimonial__item item-testimonial">
-            <div class="item-testimonial__image">
-              <img src="images/Home/Home-Testimonial.jpg" alt="Crystal boutique owner" />
+          <h2 class="testimonial__title title">Testimonials</h2>
+          <div class="testimonial__slider">
+            <button type="button" class="testimonial__arrow testimonial__arrow--prev" aria-label="Previous testimonial">
+              ‹
+            </button>
+            <div class="testimonial__viewport">
+              <div class="testimonial__track">
+                <div class="testimonial__item item-testimonial">
+                  <blockquote class="item-testimonial__quote">
+                    Our herb wall finally feels seasonal without chaos—batch notes are clear, restocks land on time, and customers
+                    comment on how fresh everything looks week after week.
+                  </blockquote>
+                  <div class="item-testimonial__image">
+                    <img src="images/Home/Home-Testimonial.jpg" alt="Portrait of Avery Nguyen" />
+                  </div>
+                  <h4 class="item-testimonial__title">Avery Nguyen</h4>
+                  <div class="item-testimonial__caption">Owner, Luna Tide Apothecary</div>
+                </div>
+                <div class="testimonial__item item-testimonial">
+                  <blockquote class="item-testimonial__quote">
+                    Wholesale tincture runs used to mean guesswork. Herbal Link’s specs and MOQs let us plan shelves and staff
+                    training in the same breath—our reorder cycle is half what it was.
+                  </blockquote>
+                  <div class="item-testimonial__image">
+                    <img src="images/Home/Home-About.jpg" alt="Wild Root Wellness storefront display" />
+                  </div>
+                  <h4 class="item-testimonial__title">Jordan Fields</h4>
+                  <div class="item-testimonial__caption">Buyer, Wild Root Wellness</div>
+                </div>
+                <div class="testimonial__item item-testimonial">
+                  <blockquote class="item-testimonial__quote">
+                    Skincare and tea kits sell best when the story is simple. Their labels and ritual copy match our brand voice,
+                    so new shoppers don’t need a lecture to feel confident taking products home.
+                  </blockquote>
+                  <div class="item-testimonial__image">
+                    <img src="images/About/About-Our-Mission.jpg" alt="Hearth &amp; Herb Collective apothecary shelf" />
+                  </div>
+                  <h4 class="item-testimonial__title">Maya Chen</h4>
+                  <div class="item-testimonial__caption">Founder, Hearth &amp; Herb Collective</div>
+                </div>
+              </div>
             </div>
-            <h4 class="item-testimonial__title">Avery Nguyen</h4>
-            <div class="item-testimonial__caption">Owner, Luna Tide Apothecary</div>
+            <button type="button" class="testimonial__arrow testimonial__arrow--next" aria-label="Next testimonial">
+              ›
+            </button>
           </div>
         </div>
       </section>
-      <section class="page__home-gallery home-gallery">
-        <div class="home-gallery__container">
-          <h2 class="home-gallery__title title">Photo Gallery</h2>
-          <div class="home-gallery__grid">
-            <div class="home-gallery__item"><img src="images/Home/Home-About.jpg" alt="Apothecary shelf display" /></div>
-            <div class="home-gallery__item"><img src="images/Home/Home-Service-1.png" alt="Dried herbs assortment" /></div>
-            <div class="home-gallery__item"><img src="images/Home/Home-Service-2.png" alt="Tea blending station" /></div>
-            <div class="home-gallery__item"><img src="images/Home/Home-Service-3.png" alt="Tincture bottles and tools" /></div>
-            <div class="home-gallery__item"><img src="images/Directory/rose-quartz.jpg" alt="Dried herbal display from directory collection" /></div>
-            <div class="home-gallery__item"><img src="images/About/About-Our-Mission.jpg" alt="Botanical ingredients and jars" /></div>
+      <section class="page__recent-articles recent-articles">
+        <div class="recent-articles__container">
+          <h2 class="recent-articles__title title">Recent Articles</h2>
+          <div class="recent-articles__grid">
+            <article class="recent-articles__card">
+              <a href="blog.html" class="recent-articles__media">
+                <img src="images/Home/Home-Service-1.png" alt="Recent article on herb trends" />
+              </a>
+              <h3 class="recent-articles__card-title">Top Herb Trends for Wellness Boutiques in 2026</h3>
+              <p class="recent-articles__text">
+                Explore what customers are asking for most and how to stock your herb offerings with confidence.
+              </p>
+            </article>
+            <article class="recent-articles__card">
+              <a href="blog.html" class="recent-articles__media">
+                <img src="images/Home/Home-Service-2.png" alt="Recent article on tea menus" />
+              </a>
+              <h3 class="recent-articles__card-title">How to Price Loose-Leaf Tea Menus for Better Margins</h3>
+              <p class="recent-articles__text">
+                Practical pricing strategies that keep your tea lineup approachable while protecting profitability.
+              </p>
+            </article>
+            <article class="recent-articles__card">
+              <a href="blog.html" class="recent-articles__media">
+                <img src="images/Home/Home-Service-3.png" alt="Recent article on tincture education" />
+              </a>
+              <h3 class="recent-articles__card-title">A Beginner-Friendly Tincture Primer for Retail Staff</h3>
+              <p class="recent-articles__text">
+                Train your team with clear language and core usage principles for better customer guidance.
+              </p>
+            </article>
           </div>
         </div>
       </section>

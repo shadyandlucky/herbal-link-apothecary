@@ -3,6 +3,32 @@ document.querySelector(".icon-menu").addEventListener("click", function (event) 
   document.body.classList.toggle("menu-open");
 });
 
+/* Blog page: filter all-articles cards by category */
+(function initBlogArticleFilters() {
+  const filters = Array.from(document.querySelectorAll(".blog-articles__filter"));
+  const cards = Array.from(document.querySelectorAll(".blog-article-card"));
+  if (!filters.length || !cards.length) return;
+
+  function applyFilter(filter) {
+    cards.forEach(function (card) {
+      const category = card.getAttribute("data-category");
+      card.hidden = filter !== "all" && category !== filter;
+    });
+  }
+
+  filters.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const filter = button.getAttribute("data-filter") || "all";
+      filters.forEach(function (item) {
+        const active = item === button;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      applyFilter(filter);
+    });
+  });
+})();
+
 /* Contact page form validation */
 (function initContactFormValidation() {
   const form = document.querySelector(".contact-form");
@@ -146,6 +172,41 @@ spollerButtons.forEach((button) => {
     }
   });
 });
+
+/* Homepage testimonials slider */
+(function initTestimonialSlider() {
+  const slider = document.querySelector(".testimonial__slider");
+  if (!slider) return;
+
+  const track = slider.querySelector(".testimonial__track");
+  const slides = slider.querySelectorAll(".testimonial__item");
+  const prevBtn = slider.querySelector(".testimonial__arrow--prev");
+  const nextBtn = slider.querySelector(".testimonial__arrow--next");
+  if (!track || !slides.length || !prevBtn || !nextBtn) return;
+
+  let index = 0;
+
+  function update() {
+    track.style.transform = "translateX(-" + index * 100 + "%)";
+    const lone = slides.length <= 1;
+    prevBtn.disabled = lone;
+    nextBtn.disabled = lone;
+  }
+
+  prevBtn.addEventListener("click", function () {
+    if (slides.length <= 1) return;
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  });
+
+  nextBtn.addEventListener("click", function () {
+    if (slides.length <= 1) return;
+    index = (index + 1) % slides.length;
+    update();
+  });
+
+  update();
+})();
 
 /* Crystal article pages: mobile slider with prev/next arrows (scrollbar hidden; swipe still works) */
 (function initCrystalArticleImageSlider() {

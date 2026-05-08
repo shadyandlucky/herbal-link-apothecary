@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <title>Herbal Link | Blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">Herbal Link</a>
+        <div class="header__navigation">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+                  <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+                  <li class="menu__item"><a href="products.html" class="menu__link">Products</a></li>
+                  <li class="menu__item"><a href="directory.html" class="menu__link">Directory</a></li>
+                  <li class="menu__item"><a href="blog.html" class="menu__link">Blog</a></li>
+                  <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+                </ul>
+                <a href="signup.html" class="actions-header__button">Sign Up</a>
+              </nav>
+          </div>
+          <div class="header__actions actions-header">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__main main main_blog main_pages">
+        <div class="main__container main__container_pages">
+          <h1 class="main__title">Blog</h1>
+          <div class="main__text main__text_pages">
+            Practical notes on herbs, teas, tinctures, and skincare rituals for modern apothecary shelves.
+          </div>
+        </div>
+      </section>
+      <section class="page__blog blog">
+        <div class="blog__container">
+          <div class="blog__layout">
+            <article class="blog__featured">
+              <a href="contact.html" class="blog__featured-media">
+                <img src="images/Home/Home-About.jpg" alt="Featured blog article" />
+              </a>
+              <h2 class="blog__featured-title">How to Build a Botanical Shelf Your Customers Actually Reorder</h2>
+              <p class="blog__featured-text">
+                A complete guide for planning herbs, teas, tinctures, and skincare assortments that sell through consistently while
+                keeping your inventory calm and seasonal.
+              </p>
+              <div class="blog__meta">Herbal Link Team · May 7, 2026 · 8 min</div>
+            </article>
+            <aside class="blog__trending">
+              <h3 class="blog__trending-title">Trending on Herbal Link</h3>
+              <a href="contact.html" class="blog__trending-item">
+                <div class="blog__trending-thumb">
+                  <img src="images/Home/Home-Service-1.png" alt="Top herb trends" />
+                </div>
+                <div class="blog__trending-body">
+                  <div class="blog__trending-headline">Top Herb Trends for Wellness Boutiques in 2026</div>
+                  <div class="blog__trending-meta">May 6, 2026 · 7 min</div>
+                </div>
+              </a>
+              <a href="contact.html" class="blog__trending-item">
+                <div class="blog__trending-thumb">
+                  <img src="images/Home/Home-Service-2.png" alt="Tea menu guide" />
+                </div>
+                <div class="blog__trending-body">
+                  <div class="blog__trending-headline">How to Price Loose-Leaf Tea Menus for Better Margins</div>
+                  <div class="blog__trending-meta">May 2, 2026 · 6 min</div>
+                </div>
+              </a>
+              <a href="contact.html" class="blog__trending-item">
+                <div class="blog__trending-thumb">
+                  <img src="images/Home/Home-Service-3.png" alt="Tincture primer" />
+                </div>
+                <div class="blog__trending-body">
+                  <div class="blog__trending-headline">A Beginner-Friendly Tincture Primer for Retail Staff</div>
+                  <div class="blog__trending-meta">Apr 29, 2026 · 5 min</div>
+                </div>
+              </a>
+              <a href="contact.html" class="blog__trending-item">
+                <div class="blog__trending-thumb">
+                  <img src="images/Products/bead-bracelets.jpg" alt="Skincare merchandising" />
+                </div>
+                <div class="blog__trending-body">
+                  <div class="blog__trending-headline">Skincare Merchandising Tips for Small Shelf Footprints</div>
+                  <div class="blog__trending-meta">Apr 25, 2026 · 6 min</div>
+                </div>
+              </a>
+              <a href="contact.html" class="blog__trending-item">
+                <div class="blog__trending-thumb">
+                  <img src="images/Products/accessories.jpg" alt="Display label systems" />
+                </div>
+                <div class="blog__trending-body">
+                  <div class="blog__trending-headline">Label Systems That Improve Reorders and Staff Speed</div>
+                  <div class="blog__trending-meta">Apr 22, 2026 · 4 min</div>
+                </div>
+              </a>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="page__blog-articles blog-articles">
+        <div class="blog-articles__container">
+          <h2 class="blog-articles__heading">All Articles</h2>
+          <div class="blog-articles__filters" role="tablist" aria-label="Filter blog articles by category">
+            <button class="blog-articles__filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="blog-articles__filter" type="button" data-filter="herbal-guides" aria-pressed="false">Herbal Guides</button>
+            <button class="blog-articles__filter" type="button" data-filter="tea-blending" aria-pressed="false">Tea Blending</button>
+            <button class="blog-articles__filter" type="button" data-filter="tincture-craft" aria-pressed="false">Tincture Craft</button>
+            <button class="blog-articles__filter" type="button" data-filter="skincare-rituals" aria-pressed="false">Skincare Rituals</button>
+            <button class="blog-articles__filter" type="button" data-filter="shop-operations" aria-pressed="false">Shop Operations</button>
+          </div>
+          <div class="blog-articles__grid" id="blog-articles-grid">
+            <article class="blog-article-card" data-category="shop-operations">
+              <a href="contact.html" class="blog-article-card__media">
+                <img src="images/Products/clusters-geodes.jpg" alt="Podcast editing software setup" />
+              </a>
+              <div class="blog-article-card__top">
+                <span class="blog-article-card__badge">Shop Operations</span>
+                <span class="blog-article-card__meta">Apr 23, 2026 · 10 min</span>
+              </div>
+              <h3 class="blog-article-card__title">11 Merchandising Tactics That Improve Herbal Reorders</h3>
+              <p class="blog-article-card__text">
+                Practical display and labeling tactics that help customers repurchase herbs, teas, and tinctures with confidence.
+              </p>
+            </article>
+            <article class="blog-article-card" data-category="tea-blending">
+              <a href="contact.html" class="blog-article-card__media">
+                <img src="images/Products/crystal-spheres.jpg" alt="Podcast apps on a phone screen" />
+              </a>
+              <div class="blog-article-card__top">
+                <span class="blog-article-card__badge">Tea Blending</span>
+                <span class="blog-article-card__meta">Apr 19, 2026 · 13 min</span>
+              </div>
+              <h3 class="blog-article-card__title">The 9 Most Requested Tea Profiles in Wellness Retail</h3>
+              <p class="blog-article-card__text">
+                A guide to balancing calming, digestive, and energizing blends for a shelf that meets everyday demand.
+              </p>
+            </article>
+            <article class="blog-article-card" data-category="tincture-craft">
+              <a href="contact.html" class="blog-article-card__media">
+                <img src="images/Products/accessories.jpg" alt="Podcast recording tools and microphone" />
+              </a>
+              <div class="blog-article-card__top">
+                <span class="blog-article-card__badge">Tincture Craft</span>
+                <span class="blog-article-card__meta">Apr 24, 2026 · 11 min</span>
+              </div>
+              <h3 class="blog-article-card__title">Essential Tools for Consistent Small-Batch Tinctures</h3>
+              <p class="blog-article-card__text">
+                From scales to bottle workflows, these tools improve consistency, speed, and team training quality.
+              </p>
+            </article>
+            <article class="blog-article-card" data-category="herbal-guides">
+              <a href="contact.html" class="blog-article-card__media">
+                <img src="images/Home/Home-Service-1.png" alt="Planning and launching a podcast" />
+              </a>
+              <div class="blog-article-card__top">
+                <span class="blog-article-card__badge">Herbal Guides</span>
+                <span class="blog-article-card__meta">Apr 16, 2026 · 9 min</span>
+              </div>
+              <h3 class="blog-article-card__title">How to Start a Core Herb Program in 7 Practical Steps</h3>
+              <p class="blog-article-card__text">
+                Build a beginner-friendly herb assortment with sourcing standards, shelf education, and reorder timing.
+              </p>
+            </article>
+            <article class="blog-article-card" data-category="skincare-rituals">
+              <a href="contact.html" class="blog-article-card__media">
+                <img src="images/Home/Home-About.jpg" alt="Video production setup for content creators" />
+              </a>
+              <div class="blog-article-card__top">
+                <span class="blog-article-card__badge">Skincare Rituals</span>
+                <span class="blog-article-card__meta">Apr 12, 2026 · 12 min</span>
+              </div>
+              <h3 class="blog-article-card__title">Skincare Ritual Basics for Daily Botanical Use</h3>
+              <p class="blog-article-card__text">
+                Help customers build practical day and night rituals using oils, balms, and masks without overwhelm.
+              </p>
+            </article>
+            <article class="blog-article-card" data-category="shop-operations">
+              <a href="contact.html" class="blog-article-card__media">
+                <img src="images/Home/Home-Service-2.png" alt="Content strategy notes for podcasts" />
+              </a>
+              <div class="blog-article-card__top">
+                <span class="blog-article-card__badge">Shop Operations</span>
+                <span class="blog-article-card__meta">Apr 9, 2026 · 8 min</span>
+              </div>
+              <h3 class="blog-article-card__title">Building a Weekly Apothecary Workflow That Scales</h3>
+              <p class="blog-article-card__text">
+                Use a repeatable weekly cadence for intake, prep, labeling, and floor rotation across busy seasons.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="page__outro outro outro_blog">
+        <div class="outro__container">
+          <h2 class="outro__title title">Ready to Explore the Full Herbal Catalog?</h2>
+          <div class="outro__text">
+            Browse our Directory to discover herbs, teas, tinctures, and skincare ingredients organized for quick exploration.
+          </div>
+          <a href="directory.html" class="outro__button button">Go to Directory</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="contact.html" class="footer__policy">Privacy Policy – Terms & Conditions</a>
+        <a href="index.html" class="footer__logo logo">Herbal Link</a>
+        <div class="footer__copyright">Copyright © 2026 Herbal Link – All Rights Reserved</div>
+        <nav class="footer-social" aria-label="Social media">
+          <a href="https://www.facebook.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/fb.svg" width="36" height="36" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/ig.svg" width="36" height="36" alt="Instagram" /></a>
+          <a href="https://www.youtube.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/youtube.svg" width="36" height="36" alt="YouTube" /></a>
+          <a href="https://www.tiktok.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/tiktok.svg" width="36" height="36" alt="TikTok" /></a>
+          <a href="https://www.linkedin.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/in.svg" width="36" height="36" alt="LinkedIn" /></a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
