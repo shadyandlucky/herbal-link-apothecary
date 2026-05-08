@@ -476,7 +476,7 @@ h6,
   flex-direction: column;
 }
 
-.products-catalog_jewelry {
+.products-catalog_apothecary {
   background-color: #e5f1eb;
 }
 
@@ -504,11 +504,11 @@ h6,
 /* ****************DIRECTORY & CRYSTAL ARTICLES**************** */
 
 .main_directory,
-.main_crystal {
+.main_herb {
   background: url("../images/About/About-Hero.jpg") center / cover no-repeat;
 }
 
-.main_crystal .main__text_pages {
+.main_herb .main__text_pages {
   max-width: 48rem;
 }
 
@@ -703,13 +703,13 @@ h6,
   }
 }
 
-.crystal-article__container {
+.herb-article__container {
   padding-top: 5rem;
   padding-bottom: 8.75rem;
   max-width: 74.624rem;
 }
 
-.crystal-article__layout {
+.herb-article__layout {
   display: grid;
   grid-template-columns: minmax(220px, 380px) minmax(0, 1fr);
   grid-template-areas: "figure body";
@@ -718,7 +718,7 @@ h6,
   direction: ltr;
 }
 
-.crystal-article__figures {
+.herb-article__figures {
   grid-area: figure;
   grid-column: 1;
   display: flex;
@@ -731,7 +731,7 @@ h6,
   width: 100%;
 }
 
-.crystal-article__figure {
+.herb-article__figure {
   margin: 0;
   border-radius: 16px;
   overflow: hidden;
@@ -740,7 +740,7 @@ h6,
   flex-shrink: 0;
 }
 
-.crystal-article__figure img {
+.herb-article__figure img {
   width: 100%;
   height: auto;
   aspect-ratio: 1;
@@ -748,37 +748,37 @@ h6,
   display: block;
 }
 
-.crystal-article__body {
+.herb-article__body {
   grid-area: body;
   grid-column: 2;
   min-width: 0;
 }
 
-.crystal-article__breadcrumb {
+.herb-article__breadcrumb {
   font-size: 0.938rem;
   margin-bottom: 1.5rem;
   letter-spacing: 0.02em;
 }
 
-.crystal-article__breadcrumb a {
+.herb-article__breadcrumb a {
   color: #303a4d;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.crystal-article__title {
+.herb-article__title {
   margin-bottom: 0.75rem;
 }
 
-.crystal-article__subtitle {
+.herb-article__subtitle {
   font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   line-height: 140%;
 }
 
-.crystal-article__meta {
+.herb-article__meta {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem 2rem;
@@ -791,28 +791,28 @@ h6,
   letter-spacing: 0.02em;
 }
 
-.crystal-article__body h2 {
+.herb-article__body h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 2.25rem;
   margin-bottom: 1rem;
 }
 
-.crystal-article__body h2:first-child {
+.herb-article__body h2:first-child {
   margin-top: 0;
 }
 
-.crystal-article__body p {
+.herb-article__body p {
   line-height: 160%;
   letter-spacing: 0.02em;
   margin-bottom: 1.25rem;
 }
 
-.crystal-article__body p:last-of-type {
+.herb-article__body p:last-of-type {
   margin-bottom: 0;
 }
 
-.crystal-article__note {
+.herb-article__note {
   margin-top: 2.5rem;
   padding: 1rem 1.25rem;
   border-left: 3px solid #303a4d;
@@ -821,20 +821,20 @@ h6,
   opacity: 0.9;
 }
 
-.crystal-article__back {
+.herb-article__back {
   margin-top: 2.5rem;
   display: inline-block;
 }
 
 @media (max-width: 40rem) {
-  .crystal-article__layout {
+  .herb-article__layout {
     grid-template-columns: 1fr;
     grid-template-areas:
       "figure"
       "body";
   }
 
-  .crystal-article__figures {
+  .herb-article__figures {
     grid-column: 1;
     position: static;
     width: 100%;
@@ -843,14 +843,14 @@ h6,
     margin-right: auto;
   }
 
-  .crystal-article__body {
+  .herb-article__body {
     grid-column: 1;
   }
 }
 
 /* Crystal article: one photo at a time + swipe / arrow slider on small screens */
 @media (max-width: 40rem) and (prefers-reduced-motion: no-preference) {
-  .crystal-article__slider-wrap {
+  .herb-article__slider-wrap {
     grid-area: figure;
     grid-column: 1;
     width: 100%;
@@ -860,7 +860,7 @@ h6,
     position: relative;
   }
 
-  .crystal-article__slider-wrap .crystal-article__figures {
+  .herb-article__slider-wrap .herb-article__figures {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -876,11 +876,11 @@ h6,
     -ms-overflow-style: none;
   }
 
-  .crystal-article__slider-wrap .crystal-article__figures::-webkit-scrollbar {
+  .herb-article__slider-wrap .herb-article__figures::-webkit-scrollbar {
     display: none;
   }
 
-  .crystal-article__slider-wrap .crystal-article__figure {
+  .herb-article__slider-wrap .herb-article__figure {
     flex: 0 0 100%;
     min-width: 100%;
     max-width: 100%;
@@ -889,7 +889,7 @@ h6,
     box-sizing: border-box;
   }
 
-  .crystal-article__slider-arrow {
+  .herb-article__slider-arrow {
     position: absolute;
     top: 50%;
     z-index: 2;
@@ -909,30 +909,30 @@ h6,
     transition: background 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
   }
 
-  .crystal-article__slider-arrow:hover:not(:disabled) {
+  .herb-article__slider-arrow:hover:not(:disabled) {
     background: #fff;
   }
 
-  .crystal-article__slider-arrow:focus-visible {
+  .herb-article__slider-arrow:focus-visible {
     outline: 2px solid #303a4d;
     outline-offset: 2px;
   }
 
-  .crystal-article__slider-arrow:disabled {
+  .herb-article__slider-arrow:disabled {
     opacity: 0.28;
     cursor: not-allowed;
     box-shadow: none;
   }
 
-  .crystal-article__slider-arrow--prev {
+  .herb-article__slider-arrow--prev {
     left: 0.4rem;
   }
 
-  .crystal-article__slider-arrow--next {
+  .herb-article__slider-arrow--next {
     right: 0.4rem;
   }
 
-  .crystal-article__slider-arrow svg {
+  .herb-article__slider-arrow svg {
     display: block;
     width: 1.35rem;
     height: 1.35rem;
@@ -940,7 +940,7 @@ h6,
 }
 
 @media (max-width: 40rem) and (prefers-reduced-motion: reduce) {
-  .crystal-article__figures {
+  .herb-article__figures {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -948,7 +948,7 @@ h6,
     overflow-y: visible;
   }
 
-  .crystal-article__figure {
+  .herb-article__figure {
     flex: none;
     min-width: 0;
     width: 100%;

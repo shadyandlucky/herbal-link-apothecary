@@ -208,9 +208,9 @@ spollerButtons.forEach((button) => {
   update();
 })();
 
-/* Crystal article pages: mobile slider with prev/next arrows (scrollbar hidden; swipe still works) */
+/* Herb article pages: mobile slider with prev/next arrows (scrollbar hidden; swipe still works) */
 (function initCrystalArticleImageSlider() {
-  const figuresRoot = document.querySelector(".crystal-article__figures");
+  const figuresRoot = document.querySelector(".herb-article__figures");
   if (!figuresRoot) return;
 
   const mqMobile = window.matchMedia("(max-width: 40rem)");
@@ -227,7 +227,7 @@ spollerButtons.forEach((button) => {
   let onScroll = null;
 
   function slides() {
-    return figuresRoot.querySelectorAll(".crystal-article__figure");
+    return figuresRoot.querySelectorAll(".herb-article__figure");
   }
 
   function activeIndex() {
@@ -284,14 +284,14 @@ spollerButtons.forEach((button) => {
     if (!layout) return;
 
     sliderWrap = document.createElement("div");
-    sliderWrap.className = "crystal-article__slider-wrap";
+    sliderWrap.className = "herb-article__slider-wrap";
 
     layout.insertBefore(sliderWrap, figuresRoot);
     sliderWrap.appendChild(figuresRoot);
 
     prevBtn = document.createElement("button");
     prevBtn.type = "button";
-    prevBtn.className = "crystal-article__slider-arrow crystal-article__slider-arrow--prev";
+    prevBtn.className = "herb-article__slider-arrow herb-article__slider-arrow--prev";
     prevBtn.setAttribute("aria-label", "Previous image");
     prevBtn.innerHTML = chevronLeft;
     prevBtn.addEventListener("click", function () {
@@ -300,7 +300,7 @@ spollerButtons.forEach((button) => {
 
     nextBtn = document.createElement("button");
     nextBtn.type = "button";
-    nextBtn.className = "crystal-article__slider-arrow crystal-article__slider-arrow--next";
+    nextBtn.className = "herb-article__slider-arrow herb-article__slider-arrow--next";
     nextBtn.setAttribute("aria-label", "Next image");
     nextBtn.innerHTML = chevronRight;
     nextBtn.addEventListener("click", function () {
