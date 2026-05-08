@@ -7,6 +7,11 @@ document.querySelector(".icon-menu").addEventListener("click", function (event) 
 (function initContactFormValidation() {
   const form = document.querySelector(".contact-form");
   if (!form) return;
+  const successMessage = document.getElementById("contact-form-success");
+  const query = new URLSearchParams(window.location.search);
+  if (successMessage && query.get("sent") === "true") {
+    successMessage.hidden = false;
+  }
 
   const fields = Array.from(form.querySelectorAll(".contact-form__field"));
 
@@ -58,7 +63,47 @@ document.querySelector(".icon-menu").addEventListener("click", function (event) 
     fields.forEach(function (field) {
       if (!validateField(field)) isValid = false;
     });
-    if (!isValid) event.preventDefault();
+    if (!isValid) {
+      event.preventDefault();
+      return;
+    }
+
+    event.preventDefault();
+
+    const submitButton = form.querySelector(".contact-form__submit");
+    if (submitButton) submitButton.disabled = true;
+
+    const body = new FormData(form);
+    fetch("https://formsubmit.co/ajax/web@doririvera.com", {
+      method: "POST",
+      body: body,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error("Request failed");
+        return response.json();
+      })
+      .then(function () {
+        form.reset();
+        fields.forEach(function (field) {
+          setFieldError(field, "");
+        });
+        if (successMessage) {
+          successMessage.textContent = "Thank you! Your message has been sent successfully.";
+          successMessage.hidden = false;
+        }
+      })
+      .catch(function () {
+        if (successMessage) {
+          successMessage.textContent = "Something went wrong while sending your message. Please try again.";
+          successMessage.hidden = false;
+        }
+      })
+      .finally(function () {
+        if (submitButton) submitButton.disabled = false;
+      });
   });
 })();
 

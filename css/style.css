@@ -1321,6 +1321,17 @@ h6,
   cursor: pointer;
 }
 
+.contact-form__success {
+  margin-top: 1rem;
+  max-width: 545px;
+  color: #2e7d32;
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 12px;
+  padding: 0.875rem 1rem;
+  line-height: 1.4;
+}
+
 iframe {
   width: 100vw;
   height: 482px;
