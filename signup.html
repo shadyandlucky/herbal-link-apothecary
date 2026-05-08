@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <title>Herbal Link | Sign Up</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo"><img src="img/logo.png" alt="Herbal Link" /></a>
+        <div class="header__navigation">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+                  <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+                  
+                  <li class="menu__item"><a href="products.html" class="menu__link">Products</a></li>
+                  <li class="menu__item"><a href="directory.html" class="menu__link">Directory</a></li>
+                  <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+                </ul>
+                <a href="signup.html" class="actions-header__button">Sign Up</a>
+              </nav>
+          </div>
+          <div class="header__actions actions-header">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__main main main_signup main_pages">
+        <div class="main__container main__container_pages">
+          <h1 class="main__title">Sign Up</h1>
+          <div class="main__text main__text_pages">
+            Create a Herbal Link account for faster herb quotes, tea restocks, and skincare updates—no spam, just
+            apothecary supply clarity.
+          </div>
+        </div>
+      </section>
+      <section class="page__signup signup">
+        <div class="signup__container">
+          <h2 class="signup__title">Create your account</h2>
+          <p class="signup__text">
+            This form is ready for a future backend. Submitting here does not store data yet; use it to preview the sign-up
+            flow for your apothecary team.
+          </p>
+          <form class="signup__form" method="post" action="#" novalidate>
+            <div class="signup__group">
+              <label class="signup__label" for="signup-name">Full name</label>
+              <input class="signup__field" type="text" id="signup-name" name="name" autocomplete="name" required />
+            </div>
+            <div class="signup__group">
+              <label class="signup__label" for="signup-company">Company <span class="signup__optional">(optional)</span></label>
+              <input class="signup__field" type="text" id="signup-company" name="company" autocomplete="organization" />
+            </div>
+            <div class="signup__group">
+              <label class="signup__label" for="signup-email">Email</label>
+              <input class="signup__field" type="email" id="signup-email" name="email" autocomplete="email" required />
+            </div>
+            <div class="signup__row">
+              <div class="signup__group">
+                <label class="signup__label" for="signup-password">Password</label>
+                <input class="signup__field" type="password" id="signup-password" name="password" autocomplete="new-password"
+                  required minlength="8" />
+              </div>
+              <div class="signup__group">
+                <label class="signup__label" for="signup-password-confirm">Confirm password</label>
+                <input class="signup__field" type="password" id="signup-password-confirm" name="password_confirm"
+                  autocomplete="new-password" required minlength="8" />
+              </div>
+            </div>
+            <label class="signup__checkbox">
+              <input type="checkbox" name="terms" value="1" required />
+              <span>I agree to the Privacy Policy and Terms &amp; Conditions.</span>
+            </label>
+            <button type="submit" class="signup__submit actions-header__button">Create account</button>
+          </form>
+          <p class="signup__alt">Already collaborating with us? <a href="contact.html">Contact</a> for account help.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="contact.html" class="footer__policy">Privacy Policy – Terms & Conditions</a>
+        <a href="index.html" class="footer__logo logo"><img src="img/logo.png" alt="Herbal Link" /></a>
+        <div class="footer__copyright">Copyright © 2026 Herbal Link – All Rights Reserved</div>
+        <nav class="footer-social" aria-label="Social media">
+          <a href="https://www.facebook.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/fb.svg" width="36" height="36" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/ig.svg" width="36" height="36" alt="Instagram" /></a>
+          <a href="https://www.youtube.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/youtube.svg" width="36" height="36" alt="YouTube" /></a>
+          <a href="https://www.tiktok.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/tiktok.svg" width="36" height="36" alt="TikTok" /></a>
+          <a href="https://www.linkedin.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/in.svg" width="36" height="36" alt="LinkedIn" /></a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

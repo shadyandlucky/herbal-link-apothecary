@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <title>Herbal Link | Herbal Directory</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo">Herbal Link</a>
+        <div class="header__navigation">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+                  <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+                  
+                  <li class="menu__item"><a href="products.html" class="menu__link">Products</a></li>
+                  <li class="menu__item"><a href="directory.html" class="menu__link">Directory</a></li>
+                  <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+                </ul>
+                <a href="signup.html" class="actions-header__button">Sign Up</a>
+              </nav>
+          </div>
+          <div class="header__actions actions-header">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__main main main_directory main_pages">
+        <div class="main__container main__container_pages">
+          <h1 class="main__title">Herbal Directory</h1>
+          <div class="main__text main__text_pages">
+            Explore ingredients and benefits alphabetically, or search by name to jump straight to the herb you need.
+          </div>
+        </div>
+      </section>
+      <section class="page__directory directory">
+        <div class="directory__container">
+          <div class="directory__filters">
+            <div class="directory__search-wrap">
+              <label for="directory-search" class="visually-hidden">Search herbs by name</label>
+              <input type="search" id="directory-search" class="directory__search" placeholder="Search herbs…"
+                autocomplete="off" enterkeyhint="search" />
+            </div>
+            <div class="directory__type-wrap">
+              <label for="directory-type" class="visually-hidden">Filter by product type</label>
+              <select id="directory-type" class="directory__type" aria-label="Filter by product type">
+                <option value="">All product types</option>
+                <option value="herbs">Herbs</option>
+                <option value="teas">Teas</option>
+                <option value="tinctures">Tinctures</option>
+                <option value="skincare">Skincare</option>
+              </select>
+            </div>
+          </div>
+          <p class="directory__hint" id="directory-count" aria-live="polite"></p>
+          <ul class="directory__list" id="directory-list">
+            <li class="directory__item" data-search="chamomile" data-type="teas">
+              <a href="herbs/chamomile.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/amethyst.jpg" alt="Chamomile" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Chamomile</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="echinacea" data-type="tinctures">
+              <a href="herbs/echinacea.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/black-tourmaline.jpg" alt="Echinacea" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Echinacea</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="ginger" data-type="teas">
+              <a href="herbs/ginger.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/carnelian.jpg" alt="Ginger" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Ginger</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="tumeric" data-type="skincare">
+              <a href="herbs/tumeric.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/citrine.jpg" alt="Tumeric" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Tumeric</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="valerian root" data-type="tinctures">
+              <a href="herbs/valerian-root.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/clear-quartz.jpg" alt="Valerian Root" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Valerian Root</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="saint johns wort" data-type="tinctures">
+              <a href="herbs/saint-johns-wort.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/fluorite.jpg" alt="Saint John's Wort" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Saint John's Wort</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="garlic" data-type="skincare">
+              <a href="herbs/garlic.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/garnet.jpg" alt="Garlic" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Garlic</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="milk thistle" data-type="tinctures">
+              <a href="herbs/milk-thistle.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/green-aventurine.jpg" alt="Milk Thistle" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Milk Thistle</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="peppermind" data-type="teas">
+              <a href="herbs/peppermind.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/hematite.jpg" alt="Peppermind" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Peppermind</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="calendula" data-type="skincare">
+              <a href="herbs/calendula.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/labradorite.jpg" alt="Calendula" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Calendula</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="blue lotus" data-type="teas">
+              <a href="herbs/blue-lotus.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/lapis-lazuli.jpg" alt="Blue Lotus" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Blue Lotus</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="licorice root" data-type="tinctures">
+              <a href="herbs/licorice-root.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/malachite.jpg" alt="Licorice Root" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Licorice Root</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="feverfew" data-type="tinctures">
+              <a href="herbs/feverfew.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/moonstone.jpg" alt="Feverfew" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Feverfew</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="ginkgo" data-type="tinctures">
+              <a href="herbs/ginkgo.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/obsidian.jpg" alt="Ginkgo" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Ginkgo</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="ginseng" data-type="tinctures">
+              <a href="herbs/ginseng.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/rose-quartz.jpg" alt="Ginseng" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Ginseng</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="hibiscus" data-type="teas">
+              <a href="herbs/hibiscus.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/selenite.jpg" alt="Hibiscus" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Hibiscus</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="saffron" data-type="skincare">
+              <a href="herbs/saffron.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/smoky-quartz.jpg" alt="Saffron" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Saffron</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="lavendar" data-type="teas">
+              <a href="herbs/lavendar.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/tigers-eye.jpg" alt="Lavendar" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Lavendar</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="burdock" data-type="tinctures">
+              <a href="herbs/burdock.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/amethyst.jpg" alt="Burdock" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Burdock</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="hemp" data-type="tinctures">
+              <a href="herbs/hemp.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/black-tourmaline.jpg" alt="Hemp" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Hemp</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="cayenne" data-type="skincare">
+              <a href="herbs/cayenne.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/carnelian.jpg" alt="Cayenne" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Cayenne</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="eucalyptus" data-type="skincare">
+              <a href="herbs/eucalyptus.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/citrine.jpg" alt="Eucalyptus" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Eucalyptus</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="acai" data-type="skincare">
+              <a href="herbs/acai.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/clear-quartz.jpg" alt="Acai" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Acai</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="witch hazel" data-type="skincare">
+              <a href="herbs/witch-hazel.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/fluorite.jpg" alt="Witch Hazel" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Witch Hazel</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="yerba mate" data-type="teas">
+              <a href="herbs/yerba-mate.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/garnet.jpg" alt="Yerba Mate" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Yerba Mate</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="star anise" data-type="herbs">
+              <a href="herbs/star-anise.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/green-aventurine.jpg" alt="Star Anise" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Star Anise</span>
+                  <span class="directory__category">Herbs</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="jasmin" data-type="teas">
+              <a href="herbs/jasmin.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/hematite.jpg" alt="Jasmin" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Jasmin</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="flaxseed" data-type="skincare">
+              <a href="herbs/flaxseed.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/labradorite.jpg" alt="Flaxseed" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Flaxseed</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="magnolia bark" data-type="tinctures">
+              <a href="herbs/magnolia-bark.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/lapis-lazuli.jpg" alt="Magnolia Bark" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Magnolia Bark</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="alfalfa" data-type="herbs">
+              <a href="herbs/alfalfa.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/malachite.jpg" alt="Alfalfa" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Alfalfa</span>
+                  <span class="directory__category">Herbs</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="lemon balm" data-type="teas">
+              <a href="herbs/lemon-balm.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/moonstone.jpg" alt="Lemon Balm" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Lemon Balm</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="kratom" data-type="tinctures">
+              <a href="herbs/kratom.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/obsidian.jpg" alt="Kratom" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Kratom</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="oregano" data-type="teas">
+              <a href="herbs/oregano.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/rose-quartz.jpg" alt="Oregano" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Oregano</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="kava" data-type="tinctures">
+              <a href="herbs/kava.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/selenite.jpg" alt="Kava" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Kava</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="rosemary" data-type="teas">
+              <a href="herbs/rosemary.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/smoky-quartz.jpg" alt="Rosemary" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Rosemary</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="sage" data-type="teas">
+              <a href="herbs/sage.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/tigers-eye.jpg" alt="Sage" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Sage</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="elderberry" data-type="tinctures">
+              <a href="herbs/elderberry.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/amethyst.jpg" alt="Elderberry" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Elderberry</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="sandalwood" data-type="skincare">
+              <a href="herbs/sandalwood.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/black-tourmaline.jpg" alt="Sandalwood" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Sandalwood</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="clove" data-type="skincare">
+              <a href="herbs/clove.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/carnelian.jpg" alt="Clove" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Clove</span>
+                  <span class="directory__category">Skincare</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="dandelion" data-type="tinctures">
+              <a href="herbs/dandelion.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/citrine.jpg" alt="Dandelion" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Dandelion</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="thyme" data-type="teas">
+              <a href="herbs/thyme.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/clear-quartz.jpg" alt="Thyme" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Thyme</span>
+                  <span class="directory__category">Teas</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="mullein" data-type="tinctures">
+              <a href="herbs/mullein.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/fluorite.jpg" alt="Mullein" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Mullein</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="verbana" data-type="herbs">
+              <a href="herbs/verbana.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/garnet.jpg" alt="Verbana" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Verbana</span>
+                  <span class="directory__category">Herbs</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+            <li class="directory__item" data-search="ashwagandha" data-type="tinctures">
+              <a href="herbs/ashwagandha.html" class="directory__card">
+                <div class="directory__media">
+                  <img src="images/Directory/green-aventurine.jpg" alt="Ashwagandha" width="640" height="640" loading="lazy" />
+                </div>
+                <div class="directory__meta">
+                  <span class="directory__card-title">Ashwagandha</span>
+                  <span class="directory__category">Tinctures</span>
+                </div>
+                <span class="directory__teaser">Botanical apothecary favorite for daily wellness and ritual support.</span>
+              </a>
+            </li>
+          </ul>
+          <p class="directory__empty" id="directory-empty" hidden>No herbs match your search. Try another name.</p>
+        </div>
+      </section>
+      <section class="page__outro outro outro_products">
+        <div class="outro__container">
+          <h2 class="outro__title title">Need an herb you don’t see?</h2>
+          <div class="outro__text">
+            Ask our team about special orders, apothecary assortments, or custom wellness guides for your shop.
+          </div>
+          <a href="contact.html" class="outro__button button">Contact Us</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="contact.html" class="footer__policy">Privacy Policy – Terms & Conditions</a>
+        <a href="index.html" class="footer__logo logo">Herbal Link</a>
+        <div class="footer__copyright">Copyright © 2026 Herbal Link – All Rights Reserved</div>
+        <nav class="footer-social" aria-label="Social media">
+          <a href="https://www.facebook.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/fb.svg" width="36" height="36" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/ig.svg" width="36" height="36" alt="Instagram" /></a>
+          <a href="https://www.youtube.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/youtube.svg" width="36" height="36" alt="YouTube" /></a>
+          <a href="https://www.tiktok.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/tiktok.svg" width="36" height="36" alt="TikTok" /></a>
+          <a href="https://www.linkedin.com/" class="footer-social__link" target="_blank" rel="noopener noreferrer"><img src="img/contact/in.svg" width="36" height="36" alt="LinkedIn" /></a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/directory.js"></script>
+</body>
+
+</html>
