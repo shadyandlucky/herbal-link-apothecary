@@ -1270,6 +1270,7 @@ h6,
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  position: relative;
 }
 
 .contact-form__label {
@@ -1322,8 +1323,11 @@ h6,
 }
 
 .contact-form__success {
-  margin-top: 1rem;
-  max-width: 545px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 0.75rem;
+  max-width: 100%;
   color: #2e7d32;
   background: #e8f5e9;
   border: 1px solid #c8e6c9;
