@@ -1211,6 +1211,16 @@ h6,
   padding-bottom: 140px;
 }
 
+.contact__contacts {
+  flex: 0 1 40%;
+  min-width: 0;
+}
+
+.contact__info {
+  flex: 0 1 60%;
+  min-width: 0;
+}
+
 .contact__title {
   margin-bottom: 48px;
   font-weight: 600;
@@ -1266,11 +1276,11 @@ h6,
 }
 
 .contact-form {
-  max-width: 545px;
+  width: 100%;
+  max-width: none;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  position: relative;
 }
 
 .contact-form__label {
@@ -1323,11 +1333,9 @@ h6,
 }
 
 .contact-form__success {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  margin-top: 0.75rem;
-  max-width: 100%;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: none;
   color: #2e7d32;
   background: #e8f5e9;
   border: 1px solid #c8e6c9;

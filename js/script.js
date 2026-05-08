@@ -73,6 +73,15 @@ document.querySelector(".icon-menu").addEventListener("click", function (event) 
     const submitButton = form.querySelector(".contact-form__submit");
     if (submitButton) submitButton.disabled = true;
 
+    const subjectInput = form.querySelector("#contact-subject");
+    const subjectHidden = form.querySelector('input[name="_subject"]');
+    if (subjectInput && subjectHidden) {
+      const trimmed = subjectInput.value.trim();
+      subjectHidden.value = trimmed
+        ? "Herbal Link Contact: " + trimmed
+        : "New message from Herbal Link contact form";
+    }
+
     const body = new FormData(form);
     fetch("https://formsubmit.co/ajax/web@doririvera.com", {
       method: "POST",
