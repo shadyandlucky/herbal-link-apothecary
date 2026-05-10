@@ -84,6 +84,7 @@ h6,
 .header__logo {
   position: relative;
   z-index: 2;
+  flex-shrink: 0;
 }
 
 .header__navigation {
@@ -91,12 +92,26 @@ h6,
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .menu__body {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .menu__link {
@@ -2517,6 +2532,11 @@ iframe {
     padding-bottom: 80px;
   }
 
+  .header__actions {
+    position: relative;
+    z-index: 1010;
+  }
+
   .icon-menu {
     display: block;
     position: relative;
@@ -2600,6 +2620,7 @@ iframe {
     overflow: auto;
     flex-direction: column;
     row-gap: 5rem;
+    z-index: 1005;
   }
 
   .menu__body::before {
