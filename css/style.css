@@ -79,6 +79,8 @@ h6,
   min-height: 5.75rem;
   flex-wrap: wrap;
   max-width: 74.624rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header__logo {
@@ -97,13 +99,9 @@ h6,
   min-width: 0;
 }
 
+/* Unwrap extra div so .menu__body participates in .header__navigation flex */
 .header__menu {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  min-width: 0;
+  display: contents;
 }
 
 .menu__body {
@@ -141,6 +139,12 @@ h6,
 
 .icon-menu {
   display: none;
+}
+
+@media (min-width: 48rem) {
+  .header__container {
+    flex-wrap: nowrap;
+  }
 }
 
 .actions-header__button {
