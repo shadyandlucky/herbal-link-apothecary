@@ -37,6 +37,19 @@
 (function initContactFormValidation() {
   const form = document.querySelector(".contact-form");
   if (!form) return;
+
+  const host = window.location.hostname;
+  const isLocal =
+    host === "localhost" || host === "127.0.0.1" || host === "[::1]";
+  if (!isLocal) {
+    const nextInput = document.createElement("input");
+    nextInput.type = "hidden";
+    nextInput.name = "_next";
+    nextInput.value =
+      "https://shadyandlucky.github.io/herbal-link-apothecary/contact.html?sent=true";
+    form.appendChild(nextInput);
+  }
+
   const successMessage = document.getElementById("contact-form-success");
   const query = new URLSearchParams(window.location.search);
   if (successMessage && query.get("sent") === "true") {
@@ -98,11 +111,6 @@
       return;
     }
 
-    event.preventDefault();
-
-    const submitButton = form.querySelector(".contact-form__submit");
-    if (submitButton) submitButton.disabled = true;
-
     const subjectInput = form.querySelector("#contact-subject");
     const subjectHidden = form.querySelector('input[name="_subject"]');
     if (subjectInput && subjectHidden) {
@@ -112,37 +120,56 @@
         : "New message from Herbal Link contact form";
     }
 
-    const body = new FormData(form);
-    fetch("https://formsubmit.co/ajax/web@doririvera.com", {
-      method: "POST",
-      body: body,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        if (!response.ok) throw new Error("Request failed");
-        return response.json();
+    if (isLocal) {
+      event.preventDefault();
+
+      const submitButton = form.querySelector(".contact-form__submit");
+      if (submitButton) submitButton.disabled = true;
+
+      const action = form.getAttribute("action") || "";
+      const ajaxUrl = action.replace(
+        /^https:\/\/formsubmit\.co\//,
+        "https://formsubmit.co/ajax/"
+      );
+      const body = new FormData(form);
+      body.append("_captcha", "false");
+
+      fetch(ajaxUrl, {
+        method: "POST",
+        body: body,
+        headers: {
+          Accept: "application/json",
+        },
       })
-      .then(function () {
-        form.reset();
-        fields.forEach(function (field) {
-          setFieldError(field, "");
+        .then(function (response) {
+          if (!response.ok) throw new Error("Request failed");
+          return response.json();
+        })
+        .then(function () {
+          form.reset();
+          fields.forEach(function (field) {
+            setFieldError(field, "");
+          });
+          if (successMessage) {
+            successMessage.textContent =
+              "Thank you! Your message has been sent successfully.";
+            successMessage.hidden = false;
+          }
+        })
+        .catch(function () {
+          if (successMessage) {
+            successMessage.textContent =
+              "Something went wrong while sending your message. Please try again.";
+            successMessage.hidden = false;
+          }
+        })
+        .finally(function () {
+          if (submitButton) submitButton.disabled = false;
         });
-        if (successMessage) {
-          successMessage.textContent = "Thank you! Your message has been sent successfully.";
-          successMessage.hidden = false;
-        }
-      })
-      .catch(function () {
-        if (successMessage) {
-          successMessage.textContent = "Something went wrong while sending your message. Please try again.";
-          successMessage.hidden = false;
-        }
-      })
-      .finally(function () {
-        if (submitButton) submitButton.disabled = false;
-      });
+      return;
+    }
+
+    /* Production: full POST so FormSubmit reCAPTCHA runs; _next returns with ?sent=true */
   });
 })();
 

@@ -35,12 +35,26 @@ test.describe("Herbal Link — smoke", () => {
     await expect(page.getByText("Email Address is required.")).toBeVisible();
   });
 
-  test("contact form succeeds with mocked FormSubmit", async ({ page }) => {
-    await page.route("**/formsubmit.co/ajax/**", async (route) => {
+  test("contact form succeeds with mocked FormSubmit (localhost uses AJAX)", async ({ page }) => {
+    await page.route("**/formsubmit.co/**", async (route) => {
+      if (route.request().method() !== "POST") {
+        await route.continue();
+        return;
+      }
+      const url = route.request().url();
+      if (url.includes("/ajax/")) {
+        await route.fulfill({
+          status: 200,
+          contentType: "application/json",
+          body: JSON.stringify({ success: "true" }),
+        });
+        return;
+      }
       await route.fulfill({
-        status: 200,
-        contentType: "application/json",
-        body: JSON.stringify({ ok: true }),
+        status: 303,
+        headers: {
+          Location: "http://127.0.0.1:4173/contact.html?sent=true",
+        },
       });
     });
 
